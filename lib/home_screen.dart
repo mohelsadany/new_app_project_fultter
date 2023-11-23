@@ -8,7 +8,20 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         leading: const Icon(Icons.menu
         ),
-        title: const Text("Home Screen"
+        title: Container(
+          child: const Row(
+            children: [
+              Center(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Center(
+                    child: Text("Home Screen"
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
         actions: const [
           Icon(Icons.search
@@ -20,7 +33,8 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: const Center(
-        child: Text("Home Screen"),
+        child: Text("Hello !"
+        ),
       ),
     );
   }
