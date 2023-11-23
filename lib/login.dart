@@ -1,7 +1,8 @@
+// add login widget here
 
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Center(
-                    child: Text("Home Screen"
+                    child: Text("Login"
                     ),
                   ),
                 ),
@@ -39,3 +40,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
