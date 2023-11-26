@@ -10,7 +10,6 @@ void main() {
 //stateless widget
 // stateful widget
 
-
 class myApp extends StatelessWidget {
   // constructor
   // build method
@@ -25,5 +24,4 @@ class myApp extends StatelessWidget {
       },
     );
   }
-
 }
