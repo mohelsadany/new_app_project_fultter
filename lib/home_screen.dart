@@ -26,51 +26,116 @@ class HomeScreen extends StatelessWidget {
         ],
         backgroundColor: Colors.blue,
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: Container(
-            
-              color: Colors.red,
-              width: double.infinity,
-              alignment: Alignment.center,
-              child: const Text("Hello World!",
+      // body: Container(
+      //   color: Colors.green,
+      //   width: double.infinity,
+      //   child: Column(
+      //     mainAxisSize: MainAxisSize.max,
+      //     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     crossAxisAlignment: CrossAxisAlignment.end,
+      //     children: [
+      //       Container(
+      //         color: Colors.red,
+      //         child: const Text("Hello World!",
+      //         style: TextStyle(
+      //           color: Colors.white,
+      //           fontSize: 20,
+      //         ),
+      //         ),
+      //       ),
+      //
+      //       Container(
+      //         color: Colors.blue,
+      //         child: const Text("Hello World!",
+      //         style: TextStyle(
+      //           color: Colors.white,
+      //           fontSize: 20,
+      //         ),
+      //       ),
+      //       ),
+      //       Container(
+      //         color: Colors.black,
+      //         child: const Text("Hello World!",
+      //           style: TextStyle(
+      //             color: Colors.white,
+      //             fontSize: 20,
+      //           ),
+      //         ),
+      //       ),
+      //       Container(
+      //         color: Colors.yellow,
+      //         child: const Text("Hello World!",
+      //           style: TextStyle(
+      //             color: Colors.white,
+      //             fontSize: 20,
+      //           ),
+      //         ),
+      //       ),
+      //       Container(
+      //         color: Colors.purple,
+      //         child: const Text("Hello World!",
+      //           style: TextStyle(
+      //             color: Colors.white,
+      //             fontSize: 20,
+      //           ),
+      //         ),
+      //       ),
+      //       Container(
+      //         color: Colors.orange,
+      //         child: const Text("Hello World!",
+      //           style: TextStyle(
+      //             color: Colors.white,
+      //             fontSize: 20,
+      //           ),
+      //         ),
+      //       ),
+      //
+      //     ],
+      //   ),
+      // ),
+      body: Row(
+        children:[
+          Container(
+            color: Colors.red,
+            child: const Text("First!",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
               ),
-              ),
             ),
           ),
-          Expanded(
-            child: Container(
-              color: Colors.green,
-              width: double.infinity,
-              alignment: Alignment.center,
-              child: const Text("Hello World!",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              color: Colors.blue,
-              width: double.infinity,
-              alignment: Alignment.center,
-              child: const Text("Hello World!",
+          Container(
+            color: Colors.blue,
+            child: const Text("Second!",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
               ),
             ),
+          ),
+          Container(
+            color: Colors.black,
+            child: const Text("Third!",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+              ),
             ),
           ),
-          ],
+          Container(
+            color: Colors.yellow,
+            child: const Text("Fourth!",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+              ),
+            ),
+          ),
+        ],
       ),
     );
+
+
   }
 }
 
