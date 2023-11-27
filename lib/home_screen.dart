@@ -1,148 +1,89 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // main axis alignment : start
+    // cross axis alignment : center
+
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
-        title: Container(
-          child: const Row(
-            children: [
-              Center(
-                child: Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Center(
-                    child: Text("Home Screen"),
+        backgroundColor: Colors.teal,
+        leading: const Icon(
+          Icons.menu,
+        ),
+        title: const Text(
+          'First App',
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.notification_important,
+            ),
+            onPressed: onNotification,
+          ),
+          IconButton(
+            icon: const Text(
+              'hello',
+            ),
+            onPressed: () {
+              print('hello');
+            },
+          ),
+        ],
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(50.0),
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadiusDirectional.only(
+                  topStart: Radius.circular(
+                    20.0,
                   ),
                 ),
-              )
-            ],
-          ),
-        ),
-        actions: const [
-          IconButton(onPressed: search, icon: Icon(Icons.search)),
-          IconButton(onPressed: notifications, icon: Icon(Icons.notifications)),
-        ],
-        backgroundColor: Colors.blue,
-      ),
-      // body: Container(
-      //   color: Colors.green,
-      //   width: double.infinity,
-      //   child: Column(
-      //     mainAxisSize: MainAxisSize.max,
-      //     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //     crossAxisAlignment: CrossAxisAlignment.end,
-      //     children: [
-      //       Container(
-      //         color: Colors.red,
-      //         child: const Text("Hello World!",
-      //         style: TextStyle(
-      //           color: Colors.white,
-      //           fontSize: 20,
-      //         ),
-      //         ),
-      //       ),
-      //
-      //       Container(
-      //         color: Colors.blue,
-      //         child: const Text("Hello World!",
-      //         style: TextStyle(
-      //           color: Colors.white,
-      //           fontSize: 20,
-      //         ),
-      //       ),
-      //       ),
-      //       Container(
-      //         color: Colors.black,
-      //         child: const Text("Hello World!",
-      //           style: TextStyle(
-      //             color: Colors.white,
-      //             fontSize: 20,
-      //           ),
-      //         ),
-      //       ),
-      //       Container(
-      //         color: Colors.yellow,
-      //         child: const Text("Hello World!",
-      //           style: TextStyle(
-      //             color: Colors.white,
-      //             fontSize: 20,
-      //           ),
-      //         ),
-      //       ),
-      //       Container(
-      //         color: Colors.purple,
-      //         child: const Text("Hello World!",
-      //           style: TextStyle(
-      //             color: Colors.white,
-      //             fontSize: 20,
-      //           ),
-      //         ),
-      //       ),
-      //       Container(
-      //         color: Colors.orange,
-      //         child: const Text("Hello World!",
-      //           style: TextStyle(
-      //             color: Colors.white,
-      //             fontSize: 20,
-      //           ),
-      //         ),
-      //       ),
-      //
-      //     ],
-      //   ),
-      // ),
-      body: Row(
-        children:[
-          Container(
-            color: Colors.red,
-            child: const Text("First!",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
               ),
-            ),
-          ),
-          Container(
-            color: Colors.blue,
-            child: const Text("Second!",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.black,
-            child: const Text("Third!",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.yellow,
-            child: const Text("Fourth!",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                children: [
+                  const Image(
+                    image: NetworkImage(
+                      'https://cdn.pixabay.com/photo/2015/04/19/08/33/flower-729512__340.jpg',
+                    ),
+                    height: 200.0,
+                    width: 200.0,
+                    fit: BoxFit.cover,
+                  ),
+                  Container(
+                    width: 200.0,
+                    color: Colors.black.withOpacity(.7),
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                    ),
+                    child: const Text(
+                      'Flower',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
         ],
       ),
     );
-
-
   }
-}
 
-void notifications() {
-  print("Notifications");
-}
-
-void search() {
-  print("Search");
+  // when notification icon button clicked
+  void onNotification() {
+    print('notification clicked');
+  }
 }

@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:new_app_project/home_screen.dart';
 import 'package:new_app_project/login.dart';
-import 'package:new_app_project/register.dart';
 
-void main() {
-  runApp(myApp());
+void main()
+{
+  runApp(MyApp());
 }
 
-//stateless widget
-// stateful widget
+// Stateless
+// Stateful
 
-class myApp extends StatelessWidget {
+// class MyApp
+
+class MyApp extends StatelessWidget
+{
   // constructor
-  // build method
+  // build
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return MaterialApp(
-      home: HomeScreen(),
-      routes: {
-        '/login': (context) => Login(),
-        '/register': (context) => Register(),
-      },
+      debugShowCheckedModeBanner: false,
+      home:  LoginScreen(),
     );
   }
 }
