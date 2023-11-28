@@ -15,14 +15,14 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Login',
                   style: TextStyle(
                     fontSize: 40.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 40.0,
                 ),
                 TextFormField(
@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
                   onChanged: (String value) {
                     print(value);
                   },
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Email Address',
                     prefixIcon: Icon(
                       Icons.email,
@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                     border: OutlineInputBorder(),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15.0,
                 ),
                 TextFormField(
@@ -55,7 +55,7 @@ class LoginScreen extends StatelessWidget {
                   onChanged: (String value) {
                     print(value);
                   },
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Password',
                     prefixIcon: Icon(
                       Icons.lock,
@@ -66,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                     border: OutlineInputBorder(),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20.0,
                 ),
                 Container(
@@ -77,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                       print(emailController.text);
                       print(passwordController.text);
                     },
-                    child: const Text(
+                    child: Text(
                       'LOGIN',
                       style: TextStyle(
                         color: Colors.white,
@@ -85,18 +85,18 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 10.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       'Don\'t have an account?',
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: const Text(
+                      child: Text(
                         'Register Now',
                       ),
                     ),
