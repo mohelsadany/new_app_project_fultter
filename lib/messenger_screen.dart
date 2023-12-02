@@ -15,8 +15,9 @@ class MessengerScreen extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 20.0,
+              // adding photo
               backgroundImage: NetworkImage(
-                  'https://avatars.githubusercontent.com/u/34492145?v=4'),
+                  'https://avatars.githubusercontent.com/u/36929282?s=400&u=889c4e5622565ab2e4187aa8e05fbb83ab4abb24&v=4'),
             ),
             SizedBox(
               width: 15.0,
