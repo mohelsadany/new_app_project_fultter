@@ -2,9 +2,11 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class MessengerScreen extends StatelessWidget {
+class MessengerScreen extends StatelessWidget
+{
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -15,9 +17,8 @@ class MessengerScreen extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 20.0,
-              // adding photo
               backgroundImage: NetworkImage(
-                  'https://avatars.githubusercontent.com/u/36929282?s=400&u=889c4e5622565ab2e4187aa8e05fbb83ab4abb24&v=4'),
+                  'https://avatars.githubusercontent.com/u/34492145?v=4'),
             ),
             SizedBox(
               width: 15.0,
@@ -124,8 +125,10 @@ class MessengerScreen extends StatelessWidget {
   // 2. build list
   // 3. add item to list
 
+
   // arrow function
-  Widget buildChatItem() => Row(
+  Widget buildChatItem() =>
+      Row(
         children: [
           const Stack(
             alignment: AlignmentDirectional.bottomEnd,
@@ -133,7 +136,7 @@ class MessengerScreen extends StatelessWidget {
               CircleAvatar(
                 radius: 30.0,
                 backgroundImage: NetworkImage(
-                    'https://avatars.githubusercontent.com/u/36929282?s=400&u=889c4e5622565ab2e4187aa8e05fbb83ab4abb24&v=4'),
+                    'https://avatars.githubusercontent.com/u/34492145?v=4'),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.only(
@@ -155,7 +158,7 @@ class MessengerScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Mohamed Ibrahim Elsadaany',
+                  'Abdullah Ahmed Abdullah Ahmed Abdullah Ahmed Abdullah Ahmed',
                   style: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
@@ -167,10 +170,11 @@ class MessengerScreen extends StatelessWidget {
                   height: 5.0,
                 ),
                 Row(
-                  children: [
+                  children:
+                  [
                     const Expanded(
                       child: Text(
-                        'Mohamed Ibrahim Elsadaany',
+                        'hello my name is abdullah ahmed hello my name is abdullah ahmed',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -199,41 +203,40 @@ class MessengerScreen extends StatelessWidget {
         ],
       );
 
-  Widget buildStoryItem() => Container(
+  Widget buildStoryItem() =>
+      Container(
         width: 60.0,
-        child: const SingleChildScrollView(
-          child: Column(
-            children: [
-              Stack(
-                alignment: AlignmentDirectional.bottomEnd,
-                children: [
-                  CircleAvatar(
-                    radius: 30.0,
-                    backgroundImage: NetworkImage(
-                        'https://avatars.githubusercontent.com/u/36929282?s=400&u=889c4e5622565ab2e4187aa8e05fbb83ab4abb24&v=4'),
+        child: const Column(
+          children: [
+            Stack(
+              alignment: AlignmentDirectional.bottomEnd,
+              children: [
+                CircleAvatar(
+                  radius: 30.0,
+                  backgroundImage: NetworkImage(
+                      'https://avatars.githubusercontent.com/u/34492145?v=4'),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.only(
+                    bottom: 3.0,
+                    end: 3.0,
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.only(
-                      bottom: 3.0,
-                      end: 3.0,
-                    ),
-                    child: CircleAvatar(
-                      radius: 7.0,
-                      backgroundColor: Colors.red,
-                    ),
+                  child: CircleAvatar(
+                    radius: 7.0,
+                    backgroundColor: Colors.red,
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 6.0,
-              ),
-              Text(
-                'Mohamed Ibrahim Elsadaany',
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 6.0,
+            ),
+            Text(
+              'Abdullah Mansour Ali Mansour',
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
         ),
       );
 }
